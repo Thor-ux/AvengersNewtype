@@ -1,0 +1,31 @@
+export class Movie {
+    constructor(
+      public title: string,
+      public year: number,
+      public country: string,
+      public genres: string[],
+      public slogan: string,
+      public director: string,
+      public writers: string[],
+      public producers: string[],
+      public cinematographer: string,
+      public composer: string,
+      public designers: string[],
+      public editors: string[],
+      public budget: number,
+      public usBoxOffice: number,
+      public worldBoxOffice: number,
+      public viewers: Record<string, number>,
+      public russiaBoxOffice: number,
+      public russianPremiere: Date,
+      public isImax: boolean,
+      public is3D: boolean,
+      public worldPremiere: Date,
+      public dvdRelease: Date,
+      public blurayRelease: Date,
+      public ageRating: string,
+      public mpaaRating: string,
+      public runtime: number,
+      public price: number
+    ) {}
+  }
