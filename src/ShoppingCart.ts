@@ -8,10 +8,7 @@ export class ShoppingCart {
   }
 
   removeItem(movie: Movie): void {
-    const index = this.items.indexOf(movie);
-    if (index > -1) {
-      this.items.splice(index, 1);
-    }
+    this.items = this.items.filter(Movie => movie !== movie);
   }
 
   getTotalPrice(): number {

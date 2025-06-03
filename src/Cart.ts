@@ -1,3 +1,5 @@
+import { ShoppingCart } from "./ShoppingCart";
+
 interface CartItem {
     id: number;
     price: number;
@@ -23,10 +25,7 @@ interface CartItem {
       return totalCost - (totalCost * discount / 100);
     }
   
-    removeItemById(id: number): void {
-      const index = this.items.findIndex(item => item.id === id);
-      if (index !== -1) {
-        this.items.splice(index, 1);
-      }
+    removeItem(item: CartItem): void {
+      this.items = this.items.filter(cartItem => cartItem.id !== item.id);
     }
   }
